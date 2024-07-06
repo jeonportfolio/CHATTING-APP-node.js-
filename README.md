@@ -25,7 +25,12 @@
 
 ## 유저 로그인 기능 
 
--> 프론트 엔드에서 prompt로 이름 입력창을 띄우고 
--> 프론트 엔드 채널에서 socket을 통한 emit기능을 이용하여 backend 채널로 이름 전송 
+-> 프론트엔드에서 보낸 userName과 콜백 함수를 io.js를 통해 받음 
+
+## 유저 정보 저장 
+-> Controllers 폴더에 저장 
+-> 재방문 유저, 새로운 유저를 구분하여 저장한다. (유저이름과 토큰값으로 결정)
+-> io.js에서 userController.saveUser를 import하여 저장하고 try catch문을 통해 오류를 잡아낸다 
+
 
 ## 메세지 주고 받는 기능 
