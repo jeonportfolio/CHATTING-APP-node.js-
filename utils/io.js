@@ -28,7 +28,7 @@ module.exports=function(io) {
     
                 //메세지 저장 
                 const newMessage = await chatContoller.saveChat(message,user);
-                io.emit("message", newMessage)
+                io.emit("message", newMessage);
                 cb({ok:true});
             }catch(error){
                 cb({ok:false, error: error.message});   

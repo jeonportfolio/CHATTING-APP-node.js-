@@ -6,6 +6,7 @@ chatContoller.saveChat = async(message,user) => {
         chat:message,
         user: {
             id: user._id,
+            //_id는 몽고db에서 번호를 부여해주기 때문에
             name: user.name
         }
     });
