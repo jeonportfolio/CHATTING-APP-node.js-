@@ -36,3 +36,7 @@
 ## 메세지 주고 받는 기능 
  -> socket.id로 유저를 찾고(`userController`) 그에맞는 메세지를 저장한다(`chatController`).
  -> 메세지 저장 후 `emit`기능을 통해 메세지를 유저들에게 알려준다.(try-catch문을 통해 에러잡기)
+
+## 채팅룸 만들기 
+ -> Models에 `room.js`에서 채팅방 데이터베이스 생성 -> user.js, chat.js에 모두 추가한다. 
+ 
