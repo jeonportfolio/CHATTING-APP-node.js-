@@ -2,7 +2,7 @@
 
 -> 데이터베이스 세팅(1.유저 정보 ,2. 채팅 메세지 정보 ), 웹 소켓 세팅 
 -> `npm init -y , npm install`
--> `npm i express, mongoose, cors dotenv http`
+-> `npm i express, mongoose, cors dotenv http` express = 서버, mongoose = 데이터베이스, cors = 프론트 백엔드 연결 
 -> `npm i socket.io`
 -> `npm install nodemon` (node의 실행을 도움 자동 리로딩)
 

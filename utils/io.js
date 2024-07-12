@@ -7,8 +7,6 @@ module.exports=function(io) {
     io.on("connection", async(socket) => {
         console.log("client is connected", socket.id);
 
-        socket.emit("rooms", await roomController.getAllRooms());
-
         socket.on("login", async(userName,cb) => {
             //유저 정보를 저장 -> Controllers
             try {
