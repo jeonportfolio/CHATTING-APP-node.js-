@@ -1,6 +1,5 @@
 const chatContoller = require("../Controllers/chat.controller");
-const roomController = require("../Controllers/room.controller");
-const userController = require("../Controllers/user.controller") 
+const userController = require("../Controllers/user.controller");
 
 module.exports=function(io) {
     //io관련 함수들 (on은 받는함수 emit은 보내는 함수)
@@ -13,8 +12,8 @@ module.exports=function(io) {
                 const user = await userController.saveUser(userName, socket.id);
                 const welcomeMessage = {
                     chat: `${user.name} is joined to this room`,
-                    user: { id: null, name: "system"}
-                }
+                    user: { id: null, name: "system"},
+                };
                 io.emit("message", welcomeMessage);
                 cb({ok:true, data:user});
             } catch(error){
@@ -29,7 +28,7 @@ module.exports=function(io) {
     
                 //메세지 저장 
                 const newMessage = await chatContoller.saveChat(message,user);
-                io.emit("message", newMessage);
+                io.emit("message", newMessage);//모두에게 보여줘야 하기 때문에 emit을 써야한다.
                 cb({ok:true});
             }catch(error){
                 cb({ok:false, error: error.message});   
